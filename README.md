@@ -1,66 +1,77 @@
-Skin Lesion Identifier Using DenseNet-121
-This project is a machine learning-based skin lesion identifier built using DenseNet-121, a deep convolutional neural network model. The model classifies skin lesions into 8 categories based on medical images. The dataset used for training is from Kaggle.
+# Skin Lesion Identifier Using DenseNet-121
 
-Table of Contents
-Overview
-Installation
-Dataset
-Model Architecture
-Usage
-License
-Overview
-Skin cancer is one of the most common forms of cancer, and early detection is crucial for effective treatment. This project uses a pre-trained DenseNet-121 model, fine-tuned on a Kaggle skin lesion dataset, to classify skin lesions into 8 different categories.
+This project is a machine learning-based skin lesion identifier built using **DenseNet-121**, a deep convolutional neural network model. The model classifies skin lesions into 8 categories based on medical images. The dataset used for training is from **Kaggle**.
 
-Installation
+## Table of Contents
+
+- [Overview](#overview)
+- [Installation](#installation)
+- [Dataset](#dataset)
+- [Model Architecture](#model-architecture)
+- [Usage](#usage)
+- [License](#license)
+
+## Overview
+
+Skin cancer is one of the most common forms of cancer, and early detection is crucial for effective treatment. This project uses a pre-trained **DenseNet-121** model, fine-tuned on a Kaggle skin lesion dataset, to classify skin lesions into 8 different categories.
+
+## Installation
+
 Follow the steps below to set up and run the project:
 
-Clone the repository:
+1. **Clone the repository:**
+    ```bash
+    git clone https://github.com/yourusername/skin-lesion-identifier.git
+    cd skin-lesion-identifier
+    ```
 
-bash
-Copy code
-git clone https://github.com/yourusername/skin-lesion-identifier.git
-cd skin-lesion-identifier
-Create a virtual environment (optional but recommended):
+2. **Create a virtual environment (optional but recommended):**
+    ```bash
+    python -m venv venv
+    source venv/bin/activate  # For Linux/Mac
+    .\venv\Scripts\activate   # For Windows
+    ```
 
-bash
-Copy code
-python -m venv venv
-source venv/bin/activate  # For Linux/Mac
-.\venv\Scripts\activate   # For Windows
-Install the required dependencies manually: Since there is no requirements.txt, you need to install the necessary dependencies yourself. The key dependencies include:
+3. **Install the required dependencies manually:**
+   Since there is no `requirements.txt`, you need to install the necessary dependencies yourself. The key dependencies include:
+    ```bash
+    pip install torch torchvision matplotlib numpy flask
+    ```
 
-bash
-Copy code
-pip install torch torchvision matplotlib numpy flask
-Download the dataset from Kaggle and place it in the data/ folder.
+4. **Download the dataset from Kaggle** and place it in the `data/` folder.
 
-Dataset
-The dataset used in this project is the Skin Lesion Classification dataset from Kaggle. It contains images of skin lesions labeled with 8 different lesion classes:
+## Dataset
 
-BA-cellulitis
-BA-impetigo
-FU-athlete-foot
-FU-nail-fungus
-FU-ringworm
-PA-cutaneous-larva-migrans
-VI-chickenpox
-VI-shingles
-You can download the dataset from https://www.kaggle.com/datasets/subirbiswas19/skin-disease-dataset.
+The dataset used in this project is the **Skin Lesion Classification dataset** from **Kaggle**. It contains images of skin lesions labeled with 8 different lesion classes:
 
-Model Architecture
-The model uses DenseNet-121, a deep convolutional neural network known for its efficient use of parameters and feature reuse. It has been pre-trained on ImageNet and then fine-tuned on the skin lesion dataset.
+1. **BA-cellulitis**
+2. **BA-impetigo**
+3. **FU-athlete-foot**
+4. **FU-nail-fungus**
+5. **FU-ringworm**
+6. **PA-cutaneous-larva-migrans**
+7. **VI-chickenpox**
+8. **VI-shingles**
 
-Key Details:
-Model: DenseNet-121
-Dataset: Kaggle's Skin-Disease-Dataset
-Training: Fine-tuning using pre-trained weights from ImageNet
-Usage
-Training the Model
-To train the model, run the train.py script:
+You can download the dataset from [Kaggle's Skin Disease Dataset](https://www.kaggle.com/datasets/subirbiswas19/skin-disease-dataset).
 
-bash
-Copy code
-python train.py 
+## Model Architecture
+
+The model uses **DenseNet-121**, a deep convolutional neural network known for its efficient use of parameters and feature reuse. It has been pre-trained on **ImageNet** and then fine-tuned on the skin lesion dataset.
+
+### Key Details:
+- **Model**: DenseNet-121
+- **Dataset**: Kaggle's Skin-Disease-Dataset
+- **Training**: Fine-tuning using pre-trained weights from ImageNet
+
+## Usage
+
+### Training the Model
+
+To train the model, run the `train.py` script:
+```bash
+python train.py
+```
 This will start the training process using the dataset stored in the models folder.
 
 Running the Website
