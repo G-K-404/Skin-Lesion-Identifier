@@ -35,7 +35,7 @@ Follow the steps below to set up and run the project:
 3. **Install the required dependencies manually:**
    Since there is no `requirements.txt`, you need to install the necessary dependencies yourself. The key dependencies include:
     ```bash
-    pip install torch torchvision matplotlib numpy flask
+    pip install torch torchvision torchaudio numpy matplotlib pillow flask scikit-learn
     ```
 
 4. **Download the dataset from Kaggle** and place it in the `data/` folder.
