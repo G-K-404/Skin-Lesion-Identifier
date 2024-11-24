@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skin Disease Predictor</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        
+        body {
+            background-color: #2E2E2E;
+            color: #EAEAEA;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+
+        .container {
+            background-color: #3E4E3E;
+            border-radius: 10px;
+            padding: 30px;
+            width: 90%;
+            max-width: 500px;
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+        }
+        
+        h1 {
+            font-size: 1.8rem;
+            color: #9DB69D;
+            margin-bottom: 20px;
+        }
+
+        input[type="file"] {
+            margin-top: 15px;
+            padding: 8px;
+            border: 1px solid #9DB69D;
+            border-radius: 5px;
+            width: 100%;
+            background-color: #4A5D4A;
+            color: #EAEAEA;
+            cursor: pointer;
+        }
+
+        input[type="file"]:hover {
+            background-color: #586D58;
+        }
+
+        button {
+            background-color: #9DB69D;
+            border: none;
+            border-radius: 5px;
+            color: #2E2E2E;
+            padding: 10px 20px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s;
+            margin-top: 15px;
+        }
+
+        button:hover {
+            background-color: #B3C8B3;
+        }
+
+        .result {
+            margin-top: 20px;
+            color: #9DB69D;
+        }
+
+        .result img {
+            margin-top: 10px;
+            border-radius: 8px;
+            border: 1px solid #9DB69D;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Skin Disease Prediction</h1>
+        <p>Please upload an image to analyze.</p>
+        
+        <form action="/predict" method="POST" enctype="multipart/form-data">
+            <input type="file" name="file" accept="image/*" required>
+            <button type="submit">Upload and Predict</button>
+        </form>
+        
+        {% if prediction %}
+        <div class="result">
+            <h2>Prediction Result:</h2>
+            <p>{{ prediction }}</p>
+            <img src="{{ image_data }}" alt="Uploaded Image" width="300">
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
