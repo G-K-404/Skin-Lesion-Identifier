@@ -72,17 +72,22 @@ To train the model, run the `train.py` script:
 ```bash
 python train.py
 ```
-This will start the training process using the dataset stored in the models folder.
+This will start the training process using the dataset stored in the `data/` folder:
 
-Running the Website
+### Running the Website
+
 The project also includes a website where you can interact with the model. Follow these steps to launch the website:
 
-Start the website:
+1. **Start the website:**
 
-bash
-Copy code
-python app.py
-You should be able to access the website at http://127.0.0.1:5000/ in your browser, where you can upload an image of a skin lesion for classification.
+    ```bash
+    python app.py
+    ```
 
-License
-This project is publicly available for educational and research purposes. Feel free to use the code and model.
+You should be able to access the website at `http://127.0.0.1:5000/` in your browser, where you can upload an image of a skin lesion for classification.
+
+
+## License
+
+This project is licensed under the MIT License. You are free to use, modify, and distribute the code for educational and research purposes. For more details, please see the LICENSE file in the repository.
+
